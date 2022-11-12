@@ -1,0 +1,59 @@
+.board-wrapp{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-wrapp{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+.title-wrapp h1{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.letter-wrapp{
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    
+}
+.letter-wrapp span{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+.message-wrapp{
+    width: 100%;
+    font-size: 18px;
+    transition: 0.3s;
+    color: green;
+    opacity: 0;
+    
+}
+.message-wrapp.active{
+    opacity: 1;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+.cards.pointer{
+    pointer-events: auto;
+}
+.cards.active  .card-cell .card-item {
+    transform: scale(1);
+}
+.cards.active  .card-cell .card-mask {
+    transform: scale(0);
+}
