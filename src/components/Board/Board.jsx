@@ -6,9 +6,6 @@ import Cards from "../Card/Cards";
 import Modal from "../Modal/Modal";
 import Button from "../Button/Button";
 
-// array for correct index
-
-const correctArr = []
 
 export default function Board() {
   const [start, setStart] = useState(false);
@@ -19,6 +16,8 @@ export default function Board() {
   const [findLetter, setfindLetter] = useState(data.letters[0])
   const [letters, setLetters] = useState(data.letters)
   const [correctMessage, setCorrectMessage] = useState(data.correct[0])
+  const [correctArr, setCorrectArr] = useState([])
+
   // modal state
   const [modalActive, setModalActive] = useState(false);
 
@@ -62,9 +61,11 @@ export default function Board() {
 
   // handler for cell / Card
   const handlerCard = (letter, index) => {
+    const newArr = correctArr
     if (letter === findLetter) {
       timeMessage();
-      correctArr.push(index)
+      newArr.push(index)
+      setCorrectArr([...newArr])
       uniqArray(correctArr);
     } else {
       setLose(true);
