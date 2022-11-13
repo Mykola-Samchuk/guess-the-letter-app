@@ -12,6 +12,8 @@ export default function Board() {
   const [pointerEvent, setPointerEvent] = useState(false)
   const [win, setWin] = useState(false);
   const [lose, setLose] = useState(false);
+  const [messageWin, setMessageWin] = useState(data.winner[0])
+  const [messageLose, setMessageLose] = useState(data.wrong[0])
   const [message, setMessage] = useState(false);
   const [findLetter, setfindLetter] = useState(data.letters[0])
   const [letters, setLetters] = useState(data.letters)
@@ -25,7 +27,10 @@ export default function Board() {
     setfindLetter(random(data.letters)[0])
     setLetters(random(data.letters))
     setCorrectMessage(random(data.correct)[0])
+    setMessageWin(random(data.winner)[0])
+    setMessageLose(random(data.wrong)[0])
   },[])
+  
 
   // handler Start App
   const handlerStart = () => {
@@ -102,7 +107,7 @@ export default function Board() {
       <Modal active={modalActive} setActive={setModalActive}>
         <h3>{win ? "ВІТАЮ!!!" : lose ? "ПРОГРАШ!!!" : ""}</h3>
         <h4>
-          {win ? random(data.winner)[0] : lose ? random(data.wrong)[0] : ""}
+          {win ? messageWin : lose ? messageLose : ""}
         </h4>
       </Modal>
 
