@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/guess-the-letter-app/static/css/main.d79d81af.css",
+    "main.css": "/guess-the-letter-app/static/css/main.03ec2a52.css",
     "main.js": "/guess-the-letter-app/static/js/main.0f77e01c.js",
     "index.html": "/guess-the-letter-app/index.html",
-    "main.d79d81af.css.map": "/guess-the-letter-app/static/css/main.d79d81af.css.map",
+    "main.03ec2a52.css.map": "/guess-the-letter-app/static/css/main.03ec2a52.css.map",
     "main.0f77e01c.js.map": "/guess-the-letter-app/static/js/main.0f77e01c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d79d81af.css",
+    "static/css/main.03ec2a52.css",
     "static/js/main.0f77e01c.js"
   ]
 }
