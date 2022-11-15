@@ -13,7 +13,7 @@ export default function Cards({ letter, handlerCard, index }) {
       }}
     >
       <h3 className="card-item">{letter}</h3>
-      <h3 className="card-mask">X</h3>
+      <h3 className="card-mask">?</h3>
 
     </div>
   );
